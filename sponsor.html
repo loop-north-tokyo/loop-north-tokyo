@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業・団体の方へ | loop.north tokyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero-wrap { background:var(--yellow);position:relative;overflow:hidden;padding:64px 24px 52px;text-align:center; }
+    .page-hero-wrap .d1 { position:absolute;width:160px;height:160px;background:var(--coral);border-radius:50%;top:-50px;right:7%;border:3px solid rgba(0,0,0,.12); }
+    .page-hero-wrap .d2 { position:absolute;width:90px;height:90px;background:var(--mint);border-radius:50%;bottom:8px;left:5%;border:3px solid rgba(0,0,0,.12); }
+    .page-hero-wrap .d3 { position:absolute;width:55px;height:55px;background:var(--purple);top:20px;left:20%;border:3px solid rgba(0,0,0,.12);transform:rotate(18deg); }
+    .kicker { display:inline-block;background:var(--dark);color:var(--yellow);font-size:12px;font-weight:900;padding:5px 16px;border-radius:20px;margin-bottom:16px;letter-spacing:.1em; }
+
+    .msg-box { max-width:720px;margin:0 auto;background:var(--white);border:3px solid var(--dark);border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);padding:40px; }
+    .msg-box h2 { font-size:clamp(20px,3.5vw,30px);font-weight:900;line-height:1.4;margin-bottom:16px; }
+    .msg-box h2 .hl { color:var(--yellow);background:var(--dark);padding:0 8px;border-radius:6px; }
+    .msg-box p { font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:12px; }
+    .msg-box p:last-child { margin-bottom:0; }
+
+    .merit-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px; }
+    .merit-card { padding:28px 24px; }
+    .merit-card .top { height:8px;margin:-28px -28px 20px;border-radius:var(--radius) var(--radius) 0 0; }
+    .merit-icon { font-size:44px;margin-bottom:14px;display:block; }
+    .merit-card h3 { font-size:17px;font-weight:900;margin-bottom:8px; }
+    .merit-card p  { font-size:14px;color:var(--muted);line-height:1.75; }
+
+    .pattern-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px; }
+    .pattern-card { background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);padding:28px 24px;transition:all .15s; }
+    .pattern-card:hover { transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--dark); }
+    .pattern-card .pt { height:8px;margin:-28px -24px 20px;border-radius:var(--radius) var(--radius) 0 0; }
+    .pattern-num { font-size:11px;font-weight:900;letter-spacing:.15em;margin-bottom:6px; }
+    .pattern-card h3 { font-size:18px;font-weight:900;margin-bottom:10px; }
+    .pattern-card p  { font-size:14px;color:var(--muted);line-height:1.8; }
+
+    .cta-box { background:var(--yellow);border:3px solid var(--dark);border-radius:var(--radius);box-shadow:8px 8px 0 var(--dark);padding:56px 40px;text-align:center;position:relative;overflow:hidden; }
+    .cta-box::before { content:'';position:absolute;width:280px;height:280px;background:var(--coral);opacity:.15;border-radius:50%;top:-100px;right:-60px; }
+    .cta-box::after  { content:'';position:absolute;width:180px;height:180px;background:var(--purple);opacity:.1;border-radius:50%;bottom:-60px;left:-40px; }
+    .cta-box h2 { font-size:clamp(22px,4vw,34px);font-weight:900;color:var(--dark);margin-bottom:12px;position:relative;z-index:1; }
+    .cta-box p  { font-size:15px;color:rgba(0,0,0,.7);margin-bottom:28px;line-height:1.8;position:relative;z-index:1; }
+    .cta-btns  { display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1; }
+
+    @media (max-width:600px) { .cta-box { padding:36px 20px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-dot">●</span>loop.north tokyo</a>
+    <nav><ul>
+      <li><a href="about.html">理念</a></li>
+      <li><a href="activity.html">活動紹介</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="sponsor.html">企業の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="nav-ig">📷 Instagram</a></li>
+    </ul></nav>
+    <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav"><ul>
+    <li><a href="about.html">理念</a></li>
+    <li><a href="activity.html">活動紹介</a></li>
+    <li><a href="events.html">イベント</a></li>
+    <li><a href="sponsor.html">企業の方へ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener">📷 Instagram</a></li>
+  </ul></div>
+</header>
+
+<div class="page-hero-wrap">
+  <div class="d1"></div><div class="d2"></div><div class="d3"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="kicker">FOR BUSINESS</div>
+    <h1 style="font-size:clamp(28px,6vw,48px);font-weight:900;color:var(--dark);text-shadow:3px 3px 0 rgba(0,0,0,.1);margin-bottom:8px;">企業・団体の方へ</h1>
+    <p style="color:rgba(0,0,0,.6);font-size:15px;">一緒に地域を盛り上げませんか</p>
+  </div>
+</div>
+
+<!-- メッセージ -->
+<section style="background:var(--bg);">
+  <div class="section-inner" style="display:flex;justify-content:center;">
+    <div class="msg-box fade-up">
+      <h2>地域の子育て家庭と、<br><span class="hl">つながりませんか。</span></h2>
+      <p>loop.north tokyoは、東京都北区を拠点に洋服物々交換会などを主催する地域コミュニティです。子育て家庭・環境意識の高い方・地域活動に関心を持つ方々が集まっています。</p>
+      <p>会場の提供・洋服の保管スペースのご提供・協賛・共同企画など、様々な形での連携を歓迎しています。お気軽にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- メリット -->
+<section style="background:var(--yellow);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label fade-up">MERIT</span>
+      <h2 class="section-title fade-up d1">連携するメリット</h2>
+    </div>
+    <div class="merit-grid">
+      <div class="card merit-card fade-up d1">
+        <div class="top" style="background:var(--coral);"></div>
+        <span class="merit-icon">👨‍👩‍👧</span>
+        <h3>子育て世代へのリーチ</h3>
+        <p>参加者の多くは乳幼児〜小学生を持つ親御さんです。地域の子育て家庭に直接アプローチできます。</p>
+      </div>
+      <div class="card merit-card fade-up d2">
+        <div class="top" style="background:var(--green);"></div>
+        <span class="merit-icon">🌱</span>
+        <h3>SDGs・ESGのアピール</h3>
+        <p>服の循環・環境配慮への取り組みをPRするチャンス。環境意識の高い層へのブランドイメージ向上につながります。</p>
+      </div>
+      <div class="card merit-card fade-up d3">
+        <div class="top" style="background:var(--purple);"></div>
+        <span class="merit-icon">🤝</span>
+        <h3>地域貢献のPR</h3>
+        <p>地域活動への参加・支援は地元での信頼向上につながります。ホームページ・Instagramでご紹介します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 連携パターン -->
+<section style="background:var(--white);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label fade-up">HOW TO</span>
+      <h2 class="section-title fade-up d1">連携のかたち</h2>
+    </div>
+    <div class="pattern-grid">
+      <div class="pattern-card fade-up d1">
+        <div class="pt" style="background:var(--coral);"></div>
+        <p class="pattern-num" style="color:var(--coral);">TYPE 01</p>
+        <h3>🏢 会場の提供</h3>
+        <p>イベント開催場所としてスペースをご提供いただける企業・団体を募集しています。屋内・屋外問わずご相談ください。</p>
+      </div>
+      <div class="pattern-card fade-up d2">
+        <div class="pt" style="background:var(--mint);"></div>
+        <p class="pattern-num" style="color:var(--mint);">TYPE 02</p>
+        <h3>📦 洋服の保管スペース提供</h3>
+        <p>物々交換でお預かりした洋服を一時保管できるスペースをご提供いただける企業・団体を募集しています。活動の継続的な運営に大きく貢献いただけます。</p>
+      </div>
+      <div class="pattern-card fade-up d3">
+        <div class="pt" style="background:var(--green);"></div>
+        <p class="pattern-num" style="color:var(--green);">TYPE 03</p>
+        <h3>🎁 協賛・物品提供</h3>
+        <p>イベントで配布するノベルティや、活動を支援するための物品・資金のご提供を歓迎しています。</p>
+      </div>
+      <div class="pattern-card fade-up d4">
+        <div class="pt" style="background:var(--yellow);"></div>
+        <p class="pattern-num" style="color:#b08900;">TYPE 04</p>
+        <h3>📣 共同PR・コラボ</h3>
+        <p>SNSでの共同発信・チラシ配布・合同イベントなど、貴社のPRと組み合わせた連携も可能です。</p>
+      </div>
+      <div class="pattern-card fade-up d4">
+        <div class="pt" style="background:var(--purple);"></div>
+        <p class="pattern-num" style="color:var(--purple);">TYPE 05</p>
+        <h3>💡 その他ご相談</h3>
+        <p>「こんな形で関わりたい」というご要望があればぜひご相談ください。できる限り柔軟に対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="cta-box fade-up">
+      <h2>まずはお気軽に<br>ご相談ください！</h2>
+      <p>連携・協賛のご相談はお問い合わせフォームまたは<br>InstagramのDMからどうぞ。内容により柔軟に対応いたします。</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-yellow">📋 お問い合わせフォームへ</a>
+        <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad">✨ Instagram DM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="dot">●</span> loop.north tokyo</div>
+      <p class="footer-desc">東京都北区を拠点に、洋服物々交換会などを主催。<br>想い出のある服・サイズアウトした服・まだ着られる服を次に繋げています。</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">理念</a><a href="activity.html">活動紹介</a>
+      <a href="events.html">イベント</a><a href="sponsor.html">企業の方へ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="footer-ig">📷 Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 loop.north tokyo. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

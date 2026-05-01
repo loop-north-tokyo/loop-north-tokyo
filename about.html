@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>理念 | loop.north tokyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero-wrap { background:var(--purple);position:relative;overflow:hidden;padding:64px 24px 52px;text-align:center; }
+    .page-hero-wrap .deco1 { position:absolute;width:160px;height:160px;background:var(--yellow);border-radius:50%;top:-50px;right:8%;border:3px solid rgba(0,0,0,.2); }
+    .page-hero-wrap .deco2 { position:absolute;width:80px;height:80px;background:var(--mint);border-radius:50%;bottom:10px;left:6%;border:3px solid rgba(0,0,0,.2); }
+    .kicker { display:inline-block;background:var(--white);color:var(--purple);font-size:12px;font-weight:900;padding:5px 16px;border-radius:20px;border:2px solid rgba(255,255,255,.5);margin-bottom:16px;letter-spacing:.1em; }
+
+    .big-quote {
+      background:var(--white);border:3px solid var(--dark);
+      border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);
+      padding:36px 40px;font-size:clamp(20px,3.5vw,30px);
+      font-weight:900;line-height:1.6;position:relative;margin-bottom:32px;
+    }
+    .big-quote .q-mark { font-size:80px;color:var(--purple);opacity:.15;position:absolute;top:0;left:16px;line-height:1;font-family:Georgia,serif; }
+    .big-quote .hl { color:var(--purple); }
+
+    .value-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px; }
+    .value-card { text-align:center;padding:32px 24px; }
+    .value-card .top-bar { height:8px;margin:-28px -28px 24px;border-radius:var(--radius) var(--radius) 0 0; }
+    .value-icon { font-size:48px;margin-bottom:14px;display:block; }
+    .value-card h3 { font-size:17px;font-weight:900;margin-bottom:8px; }
+    .value-card p  { font-size:14px;color:var(--muted);line-height:1.75; }
+
+    .story-body { max-width:720px;margin:0 auto; }
+    .story-body p { font-size:15px;line-height:2;margin-bottom:18px;color:var(--text); }
+
+    .message-box {
+      background:var(--purple);border:3px solid var(--dark);
+      border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);
+      padding:40px;text-align:center;margin-top:40px;
+    }
+    .message-box p   { font-size:18px;font-weight:900;color:var(--white);line-height:1.75;margin-bottom:12px; }
+    .message-box .sig { font-size:13px;color:rgba(255,255,255,.65);font-weight:400; }
+
+    @media (max-width:600px) {
+      .big-quote { padding:28px 24px; }
+      .message-box { padding:28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-dot">●</span>loop.north tokyo</a>
+    <nav><ul>
+      <li><a href="about.html">理念</a></li>
+      <li><a href="activity.html">活動紹介</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="sponsor.html">企業の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="nav-ig">📷 Instagram</a></li>
+    </ul></nav>
+    <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav"><ul>
+    <li><a href="about.html">理念</a></li>
+    <li><a href="activity.html">活動紹介</a></li>
+    <li><a href="events.html">イベント</a></li>
+    <li><a href="sponsor.html">企業の方へ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener">📷 Instagram</a></li>
+  </ul></div>
+</header>
+
+<div class="page-hero-wrap">
+  <div class="deco1"></div><div class="deco2"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="kicker">PHILOSOPHY</div>
+    <h1 style="font-size:clamp(28px,6vw,48px);font-weight:900;color:var(--white);text-shadow:3px 3px 0 rgba(0,0,0,.15);margin-bottom:8px;">理念</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:15px;">loop.north tokyoが大切にしていること</p>
+  </div>
+</div>
+
+<!-- メインメッセージ -->
+<section style="background:var(--bg);">
+  <div class="section-inner">
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="big-quote fade-up">
+        <span class="q-mark">"</span>
+        想い出のある服、サイズアウトした服、<br>
+        まだ着られる服を、<span class="hl">次に繋げたい。</span>
+      </div>
+      <p class="fade-up d1" style="font-size:15px;line-height:2;color:var(--muted);">
+        子供の成長はあっという間。先月着ていた服が、もうサイズアウトしていることも珍しくありません。<br><br>
+        大切に着ていた服、思い入れのある服、まだきれいなのにタンスで眠っている服。そんな服を「もったいない」で終わらせたくない。<br><br>
+        <strong style="color:var(--text);">loop.north tokyoは、その服を「必要な誰か」へ届ける活動です。</strong><br>
+        物々交換を通じて服の命を繋ぎ、地域のつながりを生み出し、環境への負担を減らす。そんなやさしいサイクルを東京都北区から広げていきたいと思っています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3つの価値観 -->
+<section style="background:var(--yellow);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-label fade-up">VALUES</span>
+      <h2 class="section-title fade-up d1">大切にしている<br>3つのこと</h2>
+    </div>
+    <div class="value-grid">
+      <div class="card value-card fade-up d1">
+        <div class="top-bar" style="background:var(--purple);"></div>
+        <span class="value-icon">♻️</span>
+        <h3>次につなげる</h3>
+        <p>想い出のある服・サイズアウトした服・<br>まだ着られる服を、ゴミにしない。<br>次の誰かの手に渡ることで、服は生き続ける。</p>
+      </div>
+      <div class="card value-card fade-up d2">
+        <div class="top-bar" style="background:var(--coral);"></div>
+        <span class="value-icon">🤲</span>
+        <h3>実際に手に取る体験</h3>
+        <p>子供連れではゆっくりお店で選べないことも。物々交換の場では、お子さんと一緒に来て、実際に手に取りながら服を選べます。</p>
+      </div>
+      <div class="card value-card fade-up d3">
+        <div class="top-bar" style="background:var(--green);"></div>
+        <span class="value-icon">🌍</span>
+        <h3>地域から始まる循環</h3>
+        <p>東京都北区を拠点に、近隣地域へも<br>広げていきたい。<br>小さな地域の取り組みが、<br>大きな環境への貢献につながると信じています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ストーリー -->
+<section style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label fade-up">STORY</span>
+      <h2 class="section-title fade-up d1">活動のはじまり</h2>
+    </div>
+    <div class="story-body">
+      <p class="fade-up d1">きっかけは、子供の服が山積みになった押し入れの前でした。サイズアウトしてしまった服、思い出のある服、まだきれいなのに着る機会がない服——。「これ、誰かに使ってほしいな」という気持ちが、この活動の原点です。</p>
+      <p class="fade-up d2">フリマアプリも試しましたが、出品の手間がかかる。それより、近くに住む人たちと直接やりとりできる場があればいい。そう思い、地域で小さな物々交換の場を開いてみました。</p>
+      <p class="fade-up d3">すると、同じように感じていた人たちがたくさんいました。「うちにも眠っている服がある」「こういう場が欲しかった」「子連れでゆっくりお店で選べなかったから助かる」——そんな声とともに、少しずつ輪が広がっていきました。</p>
+      <p class="fade-up d4">現在は東京都北区を拠点に活動中。今後は近隣地域でも開催を検討しています。服の物々交換を通じて、地域のつながりと環境への意識が自然に育まれる場を、これからも続けていきます。</p>
+      <div class="message-box fade-up d4">
+        <p>一枚の服をきっかけに、<br>地域に、やさしいループを。</p>
+        <span class="sig">— loop.north tokyo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--white);border-top:4px solid var(--dark);text-align:center;">
+  <div class="section-inner">
+    <h2 class="section-title fade-up">活動に<span style="color:var(--coral)">参加しませんか？</span></h2>
+    <p class="section-lead fade-up d1">次回のイベント情報はこちらからご確認いただけます。</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" class="fade-up d2">
+      <a href="events.html" class="btn btn-coral">🗓 イベントを見る</a>
+      <a href="contact.html" class="btn btn-outline">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="dot">●</span> loop.north tokyo</div>
+      <p class="footer-desc">東京都北区を拠点に、洋服物々交換会などを主催。<br>想い出のある服・サイズアウトした服・まだ着られる服を次に繋げています。</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">理念</a><a href="activity.html">活動紹介</a>
+      <a href="events.html">イベント</a><a href="sponsor.html">企業の方へ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="footer-ig">📷 Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 loop.north tokyo. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loop.north tokyo | 洋服物々交換コミュニティ</title>
+  <meta name="description" content="loop.north tokyoは東京都北区を拠点に、想い出のある洋服・サイズアウトした洋服・まだ着られる服を次に繋げる物々交換活動を主催しています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      background: var(--coral);
+      border-bottom: 4px solid var(--dark);
+      position: relative;
+      overflow: hidden;
+      padding: 64px 24px 0;
+    }
+    .hero .c1 { position:absolute;width:200px;height:200px;background:var(--yellow);border-radius:50%;top:-60px;right:8%;border:3px solid var(--dark); }
+    .hero .c2 { position:absolute;width:120px;height:120px;background:var(--mint);border-radius:50%;bottom:60px;left:4%;border:3px solid var(--dark); }
+    .hero .c3 { position:absolute;width:80px;height:80px;background:var(--purple);border-radius:50%;top:30px;left:18%;border:3px solid var(--dark); }
+    .hero .tri { position:absolute;bottom:-2px;right:14%;width:0;height:0;border-left:60px solid transparent;border-right:60px solid transparent;border-bottom:80px solid var(--yellow);filter:drop-shadow(0 -2px 0 var(--dark)); }
+    .hero .sq  { position:absolute;top:20px;right:22%;width:50px;height:50px;background:var(--green);border:3px solid var(--dark);transform:rotate(20deg); }
+
+    .hero-inner {
+      max-width:1160px;margin:0 auto;
+      display:grid;grid-template-columns:1fr auto;
+      gap:32px;align-items:flex-end;
+      position:relative;z-index:1;
+    }
+    .hero-text { padding-bottom:48px; }
+    .hero-kicker {
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--white);border:2.5px solid var(--dark);
+      border-radius:40px;padding:6px 18px;
+      font-size:13px;font-weight:900;color:var(--dark);
+      margin-bottom:20px;box-shadow:3px 3px 0 var(--dark);
+    }
+    .hero h1 {
+      font-size:clamp(30px,6vw,58px);font-weight:900;
+      line-height:1.2;color:var(--white);
+      text-shadow:4px 4px 0 rgba(0,0,0,.18);margin-bottom:16px;
+    }
+    .hero h1 .hl {
+      background:var(--yellow);color:var(--dark);
+      padding:0 8px;border-radius:6px;
+      display:inline-block;transform:rotate(-1deg);
+      box-shadow:3px 3px 0 var(--dark);
+    }
+    .hero-desc { font-size:clamp(14px,2vw,17px);color:rgba(255,255,255,.92);line-height:1.85;margin-bottom:28px;max-width:500px; }
+    .hero-btns { display:flex;gap:14px;flex-wrap:wrap; }
+    .hero-visual { display:flex;align-items:flex-end;justify-content:center;padding-bottom:0; }
+    .hero-visual .big-emoji { font-size:clamp(80px,12vw,140px);line-height:1;filter:drop-shadow(4px 4px 0 rgba(0,0,0,.15));animation:bounce 2.4s ease-in-out infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+
+    /* タブバナー */
+    .tab-banner { background:var(--white);border-bottom:4px solid var(--dark);padding:0 24px; }
+    .tab-banner-inner { max-width:1160px;margin:0 auto; }
+    .tabs-bar { border-radius:0;border:none;background:transparent;gap:0; }
+    .tab-btn { padding:18px 12px;font-size:14px;border-right:2px solid var(--dark);border-radius:0;border-top:none;border-bottom:none;border-left:none; }
+    .tab-btn:first-child { border-left:2px solid var(--dark); }
+    .tab-panel { padding:32px 0;border-top:3px solid var(--dark); }
+    .tab-panel-grid { display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center; }
+    .tab-panel-icon { font-size:64px;text-align:center; }
+    .tab-panel h3 { font-size:clamp(18px,3vw,26px);font-weight:900;margin-bottom:10px; }
+    .tab-panel p  { font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:16px; }
+
+    /* 特徴 */
+    .features-section { background:var(--yellow);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark); }
+    .feature-card { text-align:center; }
+    .feature-card .card-top { height:8px;border-radius:var(--radius) var(--radius) 0 0;margin:-28px -28px 20px; }
+    .feature-icon { font-size:44px;margin-bottom:14px;display:block; }
+    .feature-card h3 { font-size:17px;font-weight:900;margin-bottom:8px; }
+    .feature-card p  { font-size:14px;color:var(--muted);line-height:1.75; }
+
+    /* 活動紹介 */
+    .activity-section { background:var(--bg); }
+    .activity-grid { display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center; }
+    .activity-text h2 { font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.35;margin-bottom:16px; }
+    .activity-text p  { font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:14px; }
+    .activity-visual {
+      background:var(--mint);border:3px solid var(--dark);
+      border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);
+      padding:40px;text-align:center;font-size:64px;line-height:1.6;
+      position:relative;
+    }
+    .activity-visual::before { content:'♻️';position:absolute;font-size:24px;top:-14px;right:-14px;background:var(--yellow);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2.5px solid var(--dark); }
+
+    /* Instagram */
+    .ig-section { background:var(--yellow);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);padding:72px 24px;text-align:center;position:relative;overflow:hidden; }
+    .ig-section::before { content:'';position:absolute;width:300px;height:300px;background:rgba(131,58,180,.1);border-radius:50%;top:-100px;left:-80px; }
+    .ig-section::after  { content:'';position:absolute;width:200px;height:200px;background:rgba(255,107,107,.15);border-radius:50%;bottom:-60px;right:-40px; }
+    .ig-section h2 { font-size:clamp(22px,4vw,34px);font-weight:900;color:var(--dark);margin-bottom:10px;position:relative;z-index:1; }
+    .ig-section p  { font-size:15px;color:rgba(0,0,0,.7);margin-bottom:28px;position:relative;z-index:1; }
+    .btn-ig { display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:var(--white);font-weight:900;font-size:16px;padding:16px 36px;border-radius:40px;border:3px solid rgba(255,255,255,.4);transition:all .2s;position:relative;z-index:1;box-shadow:0 6px 24px rgba(0,0,0,.3); }
+    .btn-ig:hover { transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,.4);opacity:1; }
+
+    /* スポンサーストリップ */
+    .sponsor-strip { background:var(--purple);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);padding:40px 24px; }
+    .sponsor-strip-inner { max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap; }
+    .sponsor-strip h3 { font-size:clamp(18px,3vw,26px);font-weight:900;color:var(--white);margin-bottom:6px; }
+    .sponsor-strip p  { font-size:14px;color:rgba(255,255,255,.8); }
+
+    @media (max-width:768px) {
+      .hero-inner { grid-template-columns:1fr; }
+      .hero-visual { display:none; }
+      .activity-grid { grid-template-columns:1fr; }
+      .tab-panel-grid { grid-template-columns:1fr; }
+      .tab-panel-icon { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-dot">●</span>loop.north tokyo</a>
+    <nav><ul>
+      <li><a href="about.html">理念</a></li>
+      <li><a href="activity.html">活動紹介</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="sponsor.html">企業の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="nav-ig">📷 Instagram</a></li>
+    </ul></nav>
+    <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav"><ul>
+    <li><a href="about.html">理念</a></li>
+    <li><a href="activity.html">活動紹介</a></li>
+    <li><a href="events.html">イベント</a></li>
+    <li><a href="sponsor.html">企業の方へ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener">📷 Instagram</a></li>
+  </ul></div>
+</header>
+
+<!-- ヒーローバナー -->
+<div class="hero">
+  <div class="c1"></div><div class="c2"></div><div class="c3"></div>
+  <div class="sq"></div><div class="tri"></div>
+  <div class="hero-inner">
+    <div class="hero-text fade-up">
+      <div class="hero-kicker">♻️ 東京都北区を拠点に活動中</div>
+      <h1>想い出の服を、<br><span class="hl">次へ繋げよう。</span></h1>
+      <p class="hero-desc">
+        想い出のある服、サイズアウトした服、まだ着られる服を<br>
+        必要な誰かへ。実際に手に取って選べる、地域の物々交換。
+      </p>
+      <div class="hero-btns">
+        <a href="events.html" class="btn btn-yellow">🗓 次のイベントを見る</a>
+        <a href="activity.html" class="btn btn-outline">活動について →</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up d2">
+      <div class="big-emoji">👕</div>
+    </div>
+  </div>
+</div>
+
+<!-- タブバナー -->
+<div class="tab-banner">
+  <div class="tab-banner-inner">
+    <div class="tabs-bar" role="tablist">
+      <button class="tab-btn t-nen active" onclick="switchTab('nen',this)" role="tab">💡 理念</button>
+      <button class="tab-btn t-act"        onclick="switchTab('act',this)" role="tab">👕 活動紹介</button>
+      <button class="tab-btn t-ev"         onclick="switchTab('ev', this)" role="tab">🗓 イベント</button>
+      <button class="tab-btn t-biz"        onclick="switchTab('biz',this)" role="tab">🏢 企業の方へ</button>
+    </div>
+
+    <div class="tab-content active tab-panel" id="tab-nen">
+      <div class="tab-panel-grid">
+        <div class="tab-panel-icon">♻️</div>
+        <div>
+          <h3 style="color:var(--purple)">服を捨てない選択が、<br>次の誰かの笑顔になる。</h3>
+          <p>想い出のある服・サイズアウトした服・まだ着られる服を、ゴミにしない。物々交換を通じて、次へつなげていく活動を主催しています。</p>
+          <a href="about.html" class="btn btn-purple">理念をくわしく見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content tab-panel" id="tab-act">
+      <div class="tab-panel-grid">
+        <div class="tab-panel-icon">👗</div>
+        <div>
+          <h3 style="color:var(--coral)">お店でゆっくり選べない、<br>そんなパパ・ママへ。</h3>
+          <p>子供が小さいとお店でゆっくり洋服を見られないことも。loop.north tokyoの物々交換なら、お子さんと一緒に来て、実際に手に取りながら服を選べます。</p>
+          <a href="activity.html" class="btn btn-coral">活動をくわしく見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content tab-panel" id="tab-ev">
+      <div class="tab-panel-grid">
+        <div class="tab-panel-icon">📅</div>
+        <div>
+          <h3 style="color:var(--mint)">Googleカレンダーと連携して<br>最新情報をお届け！</h3>
+          <p>イベントページで開催日・場所を確認できます。急な変更はInstagramでもお知らせします。フォローしておくと便利です。</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="events.html" class="btn btn-mint">イベント情報を見る →</a>
+            <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad">✨ @loop.northtokyo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content tab-panel" id="tab-biz">
+      <div class="tab-panel-grid">
+        <div class="tab-panel-icon">🤝</div>
+        <div>
+          <h3 style="color:#b08900">地域の子育て家庭と、<br>つながりませんか。</h3>
+          <p>会場提供・洋服の保管スペース提供・協賛・共同PRなど、地域企業・団体の皆さまとの連携を歓迎しています。SDGs・ESGのPRにもつながります。</p>
+          <a href="sponsor.html" class="btn btn-yellow">企業向けページを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3つの特徴 -->
+<section class="features-section">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:40px">
+      <span class="section-label fade-up">WHAT WE DO</span>
+      <h2 class="section-title fade-up d1">loop.north tokyo<br>ってなに？</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card feature-card fade-up d1">
+        <div class="card-top" style="background:var(--coral)"></div>
+        <span class="feature-icon">👕</span>
+        <h3>服の命を次へ繋げる</h3>
+        <p>想い出のある服・サイズアウトした服・まだ着られる服を、捨てずに必要な誰かへ。洋服物々交換会などを主催しています。</p>
+      </div>
+      <div class="card feature-card fade-up d2">
+        <div class="card-top" style="background:var(--mint)"></div>
+        <span class="feature-icon">🤲</span>
+        <h3>実際に手に取って選べる</h3>
+        <p>子供連れではゆっくりお店で選べないことも多い。物々交換の場では、お子さんと一緒に来て、実際に手に取りながら服を選べます。</p>
+      </div>
+      <div class="card feature-card fade-up d3">
+        <div class="card-top" style="background:var(--green)"></div>
+        <span class="feature-icon">🌍</span>
+        <h3>地域と環境を一緒に</h3>
+        <p>東京都北区を拠点に活動中。服を循環させることで、地域のつながりと環境への配慮を同時に実現しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 写真ギャラリー -->
+<section style="background:var(--coral);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:32px;">
+      <span class="section-label fade-up">GALLERY</span>
+      <h2 class="section-title fade-up d1" style="color:var(--white);text-shadow:3px 3px 0 rgba(0,0,0,.15);">イベントの様子</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:800px;margin:0 auto;">
+      <div class="fade-up d1" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5477.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="fade-up d2" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5478.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="text-center mt-40 fade-up d4">
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad">✨ @loop.northtokyo をフォロー</a>
+    </div>
+  </div>
+</section>
+
+<!-- 波 -->
+<div style="background:var(--yellow)"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" height="48"><path d="M0,48 C360,0 1080,48 1440,0 L1440,48 Z" fill="#FFFDF5"/></svg></div>
+
+<!-- 活動紹介 -->
+<section class="activity-section">
+  <div class="section-inner">
+    <div class="activity-grid">
+      <div class="activity-text">
+        <span class="section-label fade-up">ACTIVITY</span>
+        <h2 class="fade-up d1">お店でゆっくり<br>選べなくても大丈夫。</h2>
+        <p class="fade-up d2">小さいお子さんがいると、お店でゆっくり洋服を選ぶのは難しいもの。ネットショッピングでは実物が見られない不安も。</p>
+        <p class="fade-up d2">loop.north tokyoの物々交換なら、お子さんと一緒に来て、実際に手に取りながら服を選ぶことができます。気に入ったものだけ持ち帰ってOK。</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;" class="fade-up d3">
+          <a href="activity.html" class="btn btn-coral">くわしく見る →</a>
+          <a href="events.html" class="btn btn-outline">イベントを見る</a>
+        </div>
+      </div>
+      <div class="activity-visual fade-up d2" style="padding:0;font-size:0;">
+        <img src="img活動/IMG_5474.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 波 -->
+<div style="background:var(--bg)"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" height="48"><path d="M0,0 C360,48 1080,0 1440,48 L1440,0 Z" fill="#FFFDF5"/></svg></div>
+
+<!-- Instagram -->
+<section class="ig-section">
+  <h2 class="fade-up">📷 Instagramでも発信中！</h2>
+  <p class="fade-up d1">活動の様子・イベントレポートをリアルタイムで投稿しています。</p>
+  <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad fade-up d2">✨ @loop.northtokyo をフォロー</a>
+</section>
+
+<!-- 企業向けストリップ -->
+<div class="sponsor-strip">
+  <div class="sponsor-strip-inner">
+    <div class="fade-up">
+      <h3>🏢 地域企業・団体の皆さまへ</h3>
+      <p>会場提供・洋服の保管スペース・協賛・連携など、一緒に地域を盛り上げませんか？</p>
+    </div>
+    <a href="sponsor.html" class="btn btn-yellow fade-up d1">詳しく見る →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="dot">●</span> loop.north tokyo</div>
+      <p class="footer-desc">東京都北区を拠点に、洋服物々交換会などを主催。<br>想い出のある服・サイズアウトした服・まだ着られる服を次に繋げています。</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">理念</a>
+      <a href="activity.html">活動紹介</a>
+      <a href="events.html">イベント</a>
+      <a href="sponsor.html">企業の方へ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="footer-ig">📷 Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 loop.north tokyo. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

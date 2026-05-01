@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | loop.north tokyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero-wrap { background:var(--blue);position:relative;overflow:hidden;padding:64px 24px 52px;text-align:center; }
+    .page-hero-wrap .d1 { position:absolute;width:160px;height:160px;background:var(--yellow);border-radius:50%;top:-50px;right:7%;border:3px solid rgba(0,0,0,.12); }
+    .page-hero-wrap .d2 { position:absolute;width:80px;height:80px;background:var(--coral);border-radius:50%;bottom:8px;left:5%;border:3px solid rgba(0,0,0,.12); }
+    .kicker { display:inline-block;background:var(--white);color:var(--blue);font-size:12px;font-weight:900;padding:5px 16px;border-radius:20px;border:2px solid rgba(255,255,255,.4);margin-bottom:16px;letter-spacing:.1em; }
+
+    .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start; }
+
+    .note-box { background:var(--yellow);border:2.5px solid var(--dark);border-radius:var(--radius-sm);box-shadow:4px 4px 0 var(--dark);padding:14px 18px;font-size:14px;font-weight:700;display:flex;align-items:flex-start;gap:10px;margin-bottom:24px; }
+
+    .form-embed { background:var(--white);border:3px solid var(--dark);border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);padding:48px 24px;text-align:center;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px; }
+    .form-embed-icon { font-size:48px; }
+    .form-embed h3 { font-size:17px;font-weight:900; }
+    .form-embed p  { font-size:13px;color:var(--muted);line-height:1.8; }
+
+    .setup-box { background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius);box-shadow:4px 4px 0 var(--dark);padding:24px 28px;margin-top:20px; }
+    .setup-box h4 { font-size:15px;font-weight:900;margin-bottom:14px; }
+    .setup-box ol { padding-left:18px; }
+    .setup-box ol li { font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:8px; }
+    .setup-box ol li strong { color:var(--text); }
+    .setup-box code { background:#f0f0f0;padding:2px 7px;border-radius:4px;font-size:12px;font-family:monospace; }
+
+    .sidebar-card { background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);padding:24px;margin-bottom:20px; }
+    .sidebar-card .sc-top { height:6px;margin:-24px -24px 20px;border-radius:var(--radius) var(--radius) 0 0; }
+    .sidebar-card h3 { font-size:16px;font-weight:900;margin-bottom:14px; }
+    .info-row { display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px; }
+    .info-row:last-child { margin-bottom:0; }
+    .info-row .icon  { font-size:20px;flex-shrink:0; }
+    .info-row .label { font-size:11px;color:var(--muted);margin-bottom:2px; }
+    .info-row .val   { font-weight:700;color:var(--text); }
+    .info-row .note  { font-size:12px;color:var(--muted);margin-top:2px; }
+
+    .ig-side { background:var(--yellow);border:2.5px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);padding:24px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden; }
+    .ig-side::before { content:'';position:absolute;width:120px;height:120px;background:rgba(131,58,180,.1);border-radius:50%;top:-40px;left:-30px; }
+    .ig-side h3 { font-size:15px;font-weight:900;color:var(--dark);margin-bottom:8px;position:relative;z-index:1; }
+    .ig-side p  { font-size:13px;color:rgba(0,0,0,.7);margin-bottom:14px;position:relative;z-index:1; }
+    .btn-ig-sm { display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:var(--white);font-weight:900;font-size:13px;padding:10px 20px;border-radius:40px;border:2px solid rgba(255,255,255,.25);transition:all .2s;position:relative;z-index:1; }
+    .btn-ig-sm:hover { transform:translateY(-2px);opacity:1; }
+
+    @media (max-width:768px) { .contact-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-dot">●</span>loop.north tokyo</a>
+    <nav><ul>
+      <li><a href="about.html">理念</a></li>
+      <li><a href="activity.html">活動紹介</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="sponsor.html">企業の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="nav-ig">📷 Instagram</a></li>
+    </ul></nav>
+    <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav"><ul>
+    <li><a href="about.html">理念</a></li>
+    <li><a href="activity.html">活動紹介</a></li>
+    <li><a href="events.html">イベント</a></li>
+    <li><a href="sponsor.html">企業の方へ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener">📷 Instagram</a></li>
+  </ul></div>
+</header>
+
+<div class="page-hero-wrap">
+  <div class="d1"></div><div class="d2"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="kicker">CONTACT</div>
+    <h1 style="font-size:clamp(28px,6vw,48px);font-weight:900;color:var(--white);text-shadow:3px 3px 0 rgba(0,0,0,.15);margin-bottom:8px;">お問い合わせ</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:15px;">参加・協力・取材などお気軽にご連絡ください</p>
+  </div>
+</div>
+
+<section style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <!-- フォームエリア -->
+      <div>
+        <div class="fade-up d1" style="background:var(--white);border:3px solid var(--dark);border-radius:var(--radius);box-shadow:6px 6px 0 var(--dark);overflow:hidden;">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFqr8cEC9FUEl_-S-oj_5h2JntcGGE5cYeeKZlzUm81LzfpQ/viewform?embedded=true" width="100%" height="690" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        </div>
+      </div>
+
+      <!-- サイドバー -->
+      <div>
+        <div class="sidebar-card fade-up d1">
+          <div class="sc-top" style="background:var(--blue);"></div>
+          <h3>📌 お問い合わせについて</h3>
+          <div class="info-row">
+            <span class="icon">📅</span>
+            <div>
+              <div class="label">返信について</div>
+              <div class="val">数日以内にご返信します</div>
+              <div class="note">活動はボランティアのため、お時間をいただく場合があります</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon">📍</span>
+            <div>
+              <div class="label">活動拠点</div>
+              <div class="val">東京都北区</div>
+              <div class="note">近隣地域でも今後開催を検討しています</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon">📝</span>
+            <div>
+              <div class="label">こんなご連絡お待ちしています</div>
+              <div class="val" style="font-size:13px;line-height:1.85;font-weight:500;">
+                ・イベントへの参加について<br>
+                ・活動への協力・ボランティア<br>
+                ・会場・保管スペースの提供<br>
+                ・取材・メディア掲載<br>
+                ・その他ご質問
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ig-side fade-up d2">
+          <h3>📷 InstagramのDMでもOK！</h3>
+          <p>気軽にメッセージしてください。イベント速報もこちらで発信中！</p>
+          <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-sm">✨ @loop.northtokyo</a>
+        </div>
+
+        <div class="sidebar-card fade-up d3">
+          <div class="sc-top" style="background:var(--purple);"></div>
+          <h3>🏢 企業・団体の方へ</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:16px;">会場・保管スペースの提供、協賛、連携などについては専用ページをご覧ください。</p>
+          <a href="sponsor.html" class="btn btn-purple" style="width:100%;display:block;text-align:center;">企業・団体向けページへ →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="dot">●</span> loop.north tokyo</div>
+      <p class="footer-desc">東京都北区を拠点に、洋服物々交換会などを主催。<br>想い出のある服・サイズアウトした服・まだ着られる服を次に繋げています。</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">理念</a><a href="activity.html">活動紹介</a>
+      <a href="events.html">イベント</a><a href="sponsor.html">企業の方へ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="footer-ig">📷 Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 loop.north tokyo. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

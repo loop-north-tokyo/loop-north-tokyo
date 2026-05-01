@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活動紹介 | loop.north tokyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero-wrap { background:var(--coral);position:relative;overflow:hidden;padding:64px 24px 52px;text-align:center; }
+    .page-hero-wrap .deco1 { position:absolute;width:180px;height:180px;background:var(--yellow);border-radius:50%;top:-60px;right:6%;border:3px solid rgba(0,0,0,.15); }
+    .page-hero-wrap .deco2 { position:absolute;width:90px;height:90px;background:var(--mint);border-radius:50%;bottom:10px;left:5%;border:3px solid rgba(0,0,0,.15); }
+    .page-hero-wrap .deco3 { position:absolute;width:60px;height:60px;background:var(--purple);border-radius:50%;top:20px;left:22%;border:3px solid rgba(0,0,0,.15); }
+    .kicker { display:inline-block;background:var(--white);color:var(--coral);font-size:12px;font-weight:900;padding:5px 16px;border-radius:20px;border:2px solid rgba(255,255,255,.5);margin-bottom:16px;letter-spacing:.1em; }
+
+    .point-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px; }
+    .point-card { padding:28px 24px; }
+    .point-card .top { height:8px;margin:-28px -28px 20px;border-radius:var(--radius) var(--radius) 0 0; }
+    .point-num { font-size:11px;font-weight:900;letter-spacing:.15em;margin-bottom:6px; }
+    .point-card h3 { font-size:17px;font-weight:900;margin-bottom:8px; }
+    .point-card p  { font-size:14px;color:var(--muted);line-height:1.75; }
+
+    .faq-wrap { max-width:720px;margin:0 auto; }
+    .faq-item { background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius-sm);margin-bottom:12px;box-shadow:4px 4px 0 var(--dark);overflow:hidden; }
+    .faq-q { padding:18px 22px;font-size:15px;font-weight:700;display:flex;align-items:flex-start;gap:12px; }
+    .faq-q-badge { flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--coral);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px; }
+    .faq-a { padding:0 22px 18px 62px;font-size:14px;color:var(--muted);line-height:1.8; }
+    .faq-a-badge { font-weight:900;color:var(--mint);margin-right:4px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-dot">●</span>loop.north tokyo</a>
+    <nav><ul>
+      <li><a href="about.html">理念</a></li>
+      <li><a href="activity.html">活動紹介</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="sponsor.html">企業の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="nav-ig">📷 Instagram</a></li>
+    </ul></nav>
+    <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav"><ul>
+    <li><a href="about.html">理念</a></li>
+    <li><a href="activity.html">活動紹介</a></li>
+    <li><a href="events.html">イベント</a></li>
+    <li><a href="sponsor.html">企業の方へ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener">📷 Instagram</a></li>
+  </ul></div>
+</header>
+
+<div class="page-hero-wrap">
+  <div class="deco1"></div><div class="deco2"></div><div class="deco3"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="kicker">ACTIVITY</div>
+    <h1 style="font-size:clamp(28px,6vw,48px);font-weight:900;color:var(--white);text-shadow:3px 3px 0 rgba(0,0,0,.15);margin-bottom:8px;">活動紹介</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:15px;">洋服物々交換会などを主催しています</p>
+  </div>
+</div>
+
+<!-- 概要 -->
+<section style="background:var(--bg);">
+  <div class="section-inner text-center">
+    <span class="section-label fade-up">WHAT IS THIS?</span>
+    <h2 class="section-title fade-up d1">想い出の服を持ってきて、<br><span style="color:var(--coral)">実際に手に取って選ぶ。</span></h2>
+    <p class="fade-up d2" style="font-size:15px;color:var(--muted);max-width:640px;margin:16px auto 0;line-height:1.9;">
+      想い出のある洋服・サイズアウトした洋服・まだ着られる服を持ち寄り、<br>
+      気に入ったものをもらっていく物々交換の場を主催しています。<br>
+      子供連れでゆっくりお店を回れなくても、<br>
+      ここなら実際に手に取って服を選ぶことができます。
+    </p>
+
+    <div class="point-grid" style="margin-top:48px;">
+      <div class="card point-card fade-up d1">
+        <div class="top" style="background:var(--coral);"></div>
+        <p class="point-num" style="color:var(--coral);">POINT 01</p>
+        <h3>👕 服を持ってくる</h3>
+        <p>想い出のある服・サイズアウトした服・<br>まだ着られる服をお持ちください。<br>手ぶらでの参加ももちろんOK。</p>
+      </div>
+      <div class="card point-card fade-up d2">
+        <div class="top" style="background:var(--mint);"></div>
+        <p class="point-num" style="color:var(--mint);">POINT 02</p>
+        <h3>🤲 手に取って選ぶ</h3>
+        <p>ネットショッピングと違い、<br>実際に手に取って確かめながら選べます。<br>お子さんと一緒に来て、<br>ゆっくり選んでください。</p>
+      </div>
+      <div class="card point-card fade-up d3">
+        <div class="top" style="background:var(--purple);"></div>
+        <p class="point-num" style="color:var(--purple);">POINT 03</p>
+        <h3>📍 東京都北区が拠点</h3>
+        <p>東京都北区を中心に活動中。<br>近隣地域でも今後開催を検討しています。<br>お気軽にご参加ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 写真ギャラリー -->
+<section style="background:var(--white);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:32px;">
+      <span class="section-label fade-up">GALLERY</span>
+      <h2 class="section-title fade-up d1">イベントの様子</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+      <div class="fade-up d1" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5472.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="fade-up d2" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5474.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="fade-up d3" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5477.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="fade-up d4" style="border:3px solid var(--dark);border-radius:var(--radius);box-shadow:5px 5px 0 var(--dark);overflow:hidden;aspect-ratio:1/1;">
+        <img src="img活動/IMG_5478.PNG" alt="イベントの様子" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="text-center mt-40 fade-up d4">
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad">✨ @loop.northtokyo をフォロー</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--yellow);border-top:4px solid var(--dark);border-bottom:4px solid var(--dark);">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label fade-up">FAQ</span>
+      <h2 class="section-title fade-up d1">よくある質問</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item fade-up d1">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>どんな服を持ってくればいいですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>想い出のある服・サイズアウトした服・まだ着られる服であればOKです。汚れや破損がひどいものはご遠慮ください。</div>
+      </div>
+      <div class="faq-item fade-up d2">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>子供服だけですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>イベントによって対象が異なります。最新情報はInstagramでご確認ください。</div>
+      </div>
+      <div class="faq-item fade-up d2">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>何枚まで持ってきていいですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>枚数の制限はありません。他の参加者の方も気持ちよく参加できるよう、常識の範囲でお持ちください。</div>
+      </div>
+      <div class="faq-item fade-up d3">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>服を持ってこなくてもいいですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>はい、手ぶらでの参加も大歓迎です。見学だけでも構いません。</div>
+      </div>
+      <div class="faq-item fade-up d3">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>雨の日は中止になりますか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>屋外開催の場合、荒天時は中止または延期することがあります。最新情報はInstagramでお知らせします。</div>
+      </div>
+      <div class="faq-item fade-up d4">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>東京都北区以外の人でも参加できますか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A.</span>もちろんです！どなたでもご参加いただけます。近隣地域でも今後開催を検討していますので、Instagramをフォローしてお待ちください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--coral);border-top:4px solid var(--dark);text-align:center;">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" style="color:var(--white);text-shadow:3px 3px 0 rgba(0,0,0,.15);">次のイベントに参加しよう！</h2>
+    <p class="fade-up d1" style="color:rgba(255,255,255,.88);margin-bottom:28px;">開催日・場所はイベントページまたはInstagramでご確認ください。</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;" class="fade-up d2">
+      <a href="events.html" class="btn btn-yellow">🗓 イベントを見る</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="btn-ig-grad">✨ @loop.northtokyo をフォロー</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="dot">●</span> loop.north tokyo</div>
+      <p class="footer-desc">東京都北区を拠点に、洋服物々交換会などを主催。<br>想い出のある服・サイズアウトした服・まだ着られる服を次に繋げています。</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">理念</a><a href="activity.html">活動紹介</a>
+      <a href="events.html">イベント</a><a href="sponsor.html">企業の方へ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://www.instagram.com/loop.northtokyo/" target="_blank" rel="noopener" class="footer-ig">📷 Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 loop.north tokyo. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
